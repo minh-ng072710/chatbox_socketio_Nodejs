@@ -1,0 +1,669 @@
+/* 
+-------------------------------
+    : Custom - Chat css :
+-------------------------------
+*/
+.chat-layout {
+    display: -ms-flexbox;
+    display: flex;
+}
+.chat-detail {
+    flex: 1;
+}
+.chat-leftbar {
+    background-color: $card-bg;
+    .chat-left-headbar {
+        padding: 15px;
+        border-bottom: 1px solid $border-color;
+        position: sticky;
+        top: 0;
+        background-color: $card-bg;
+        z-index: 1;
+        a {
+            float: right;
+            font-size: 20px;
+            color: $dark;
+            &:hover {
+                color: $primary;
+            }
+        }
+        .dropdown-menu {
+            top: 20px !important;
+        }
+    }
+    .chat-left-search {
+        padding: 15px;
+        border-bottom: 1px solid $border-color;
+        input[type="search"] {
+            background-color: $secondary-rgba;
+            color: $muted;
+            font-size: 16px;
+            padding-left: 20px;
+            border: none;
+            border-radius: 3px 0 0 3px;
+        }
+        ::placeholder {
+            color: $muted;
+        }
+        .input-group-append {
+            margin-left: 0px;
+        }
+        .btn {
+            background-color: $secondary-rgba;
+            color: $muted;
+            font-size: 18px;
+            border-radius: 0 3px 3px 0;
+            padding: 5px 15px 3px 5px;
+            box-shadow: none;
+            z-index: 0;
+        }
+    }
+    .chat-left-body {
+        padding-bottom: 100px;
+        .nav-pills {
+            .nav-link {
+                padding: 15px !important;
+                border-right: 2px solid transparent;                
+                border-bottom: none !important;
+                cursor: pointer;
+                color: $muted;
+                &.active {
+                    background-color: $light;
+                    border-right: 2px solid $primary;                    
+                }
+                &:hover {
+                    background-color: $light;
+                    border-right: 2px solid $primary;
+                }
+            }
+        } 
+        .chat-userlist {
+            .media {                
+                .user-status {
+                    position: relative;
+                    left: 0;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    border: 2px solid $card-bg;
+                    background-color: $primary;
+                    &.status-offline {
+                         background-color: $warning;
+                    }
+                    &.status-away {
+                         background-color: $danger;
+                    }
+                    &~ img {
+                        margin-left: -12px;
+                    }
+                }                
+                img {
+                    width: 40px;
+                    margin-right: 10px;
+                }                
+                h5 {
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                }
+                p {
+                    margin-bottom: 0;
+                    font-size: 14px;
+                }
+                .chat-timing {
+                    color: $muted;
+                    float: right;
+                    font-size: 11px;
+                    font-weight: 400;
+                    margin-top: 3px;
+                }                
+            }            
+        } 
+        .profilebar {
+            text-align: center;
+            padding: 30px 0;
+            .profile-pic {
+                width: 100px;
+                max-width: 100%;
+                height: auto;  
+                border-radius: 50%;             
+            }
+            .profile-edit {
+                position: relative;
+                top: -30px;
+                right: -40px;
+                color: $muted;
+                .profile-upload {
+                    display: none;
+                }
+                .upload-button {
+                    font-size: 20px;
+                    &:hover {
+                      color: $primary;
+                    }
+                }
+            }
+        }  
+        .profile-detail {
+            ul {
+                li {
+                    padding: 15px;
+                    border-top: 1px solid $border-color;
+                    i {
+                        font-size: 20px;
+                        color: $muted;
+                        margin-right: 15px;
+                    }
+                    p {
+                        margin-bottom: 0;
+                    }
+                    .form-control {
+                        font-size: 15px;
+                        font-weight: 600;
+                        color: $dark;
+                        border: none;
+                        padding: 0;
+                        height: calc(1em + .5rem + 2px);
+                        background-color: transparent;
+                    }
+                    .input-group-append {
+                        .btn {
+                            font-size: 11px;
+                            color: $muted;
+                            padding: 0;
+                            &:hover {
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+        .general-setting {
+            padding: 15px;
+        } 
+        .privacy-setting {
+            padding: 15px;
+        }    
+        .design-setting {
+            padding: 15px 15px 20px 20px;
+        }  
+        .setting-header {
+            padding: 15px;
+            margin-bottom: 0;
+            border-bottom: 1px solid $border-color;
+        }
+    }  
+    .chat-menu {
+        background-color: $card-bg;
+        padding: 0 15px;
+        border-top: 1px solid $border-color;
+        position: fixed;
+        bottom: 0;
+        width: 320px;
+        z-index: 9;
+    }
+}
+.chat-rightbar {
+    display: -ms-flexbox;
+    display: flex;
+}
+.chat-detail {
+    background-color: $card-bg;
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    .chat-head {
+        padding: 15px;
+        border-bottom: 1px solid $border-color;
+        .user-status {
+            position: relative;
+            left: 12px;
+            margin-left: -12px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid $card-bg;
+            background-color: $primary;
+            &.status-offline {
+                 background-color: $warning;
+            }
+            &.status-away {
+                 background-color: $danger;
+            }
+        }
+        img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        h5 {
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+        .list-inline {
+            li {
+                margin-right: 15px;
+                a {
+                    color: $dark;
+                    font-size: 20px;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+                &:last-child {
+                    margin-right: 0;
+                    display: none;
+                }
+                .dropdown-menu {
+                    top: 20px !important;
+                }
+            }
+        }
+    }
+    &.order-chat-detail {
+        .chat-body { 
+            padding: 0 20px;
+        }
+    }
+    .chat-body {
+        background-image: url(../images/authentication-bg.jpg);
+        padding: 30px 30px 100px;
+        .empty-screen {
+            text-align: center;
+            position: absolute;
+            top: 35%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        .chat-message {
+            margin-bottom: 15px;
+            .chat-message-text {
+                background-color: $card-bg;
+                color: $dark;
+                padding: 5px 10px;
+                display: inline-block;
+                border-radius: 3px;
+                position: relative;
+            }
+            .chat-message-meta {
+                margin-top: 5px;
+                font-size: 13px;
+            }
+            &.chat-message-left {
+                text-align: left;
+                .chat-message-text {
+                    &:after {
+                        content: ' ';
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        left: -10px;
+                        right: auto;
+                        top: auto;
+                        bottom: 0;
+                        border: 6px solid $card-bg;
+                        border-color: transparent $card-bg $card-bg transparent;
+                    }
+                }
+            }
+            &.chat-message-right {
+                text-align: right;
+                .chat-message-text {
+                    background-color: $primary;
+                    color: $white;
+                    text-align: left;
+                    &:after {
+                        content: ' ';
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        left: auto;
+                        right: -10px;
+                        top: auto;
+                        bottom: 0;
+                        border: 6px solid $primary;
+                        border-color: transparent transparent $primary $primary ;
+                    }
+                }
+                .chat-message-meta {
+                    text-align: right;
+                }
+            }
+        }
+        .message-media {
+            margin: 5px 0;
+            .media-more {
+                background-color: $light;
+                font-weight: 600;
+                border-radius: 3px;
+                margin-bottom: 0;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+            }
+        }     
+        .message-document {
+            margin: 5px 0;
+            h5 {
+                font-size: 15px;
+                margin-bottom: 5px;
+                margin-top: 5px;                
+                a {
+                    color: $white;
+                }                
+            }
+            p {
+                text-align: left;
+                margin-bottom: 0;
+            }
+        }
+        .message-audio {
+            margin: 5px 0 0 0;
+            audio {
+                width: 210px;
+                height: 50px;
+                background-color: #f1f3f4;
+                border-radius: 3px;
+            }
+        }  
+        .message-video {
+            margin: 5px 0 0 0;
+            video {
+                border-radius: 3px;
+            }
+        }
+    }
+    .chat-bottom {
+        background-color: $card-bg;
+        padding: 15px 30px;
+        border-top: 1px solid $border-color;
+        border-left: 1px solid $border-color;
+        position: fixed;
+        bottom: 0;
+        left: 320px;
+        right: 0;        
+        .chat-messagebar {
+            a {
+                font-size: 20px;
+                color: $dark;
+                margin-top: 5px;
+                &:hover {
+                    color: $primary;
+                }
+            }
+            input[type="text"] {
+                    background-color: transparent;
+                    color: $muted;
+                    font-size: 16px;
+                    border: none;
+                    border-radius: 0;
+            }
+            ::placeholder {
+                color: $muted;
+            }
+            .input-group-append {
+                margin-left: 0px;
+            }
+            .btn {
+                border-radius: 50% !important;
+                margin: 0 5px;
+            }
+        }
+    }
+}
+.chat-user-info {
+    width: 320px;
+    height: 100vh;
+    background: $card-bg;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    &.show {
+        display: block;
+    }   
+    .chat-user-head {
+        padding: 15px;
+        border-bottom: 1px solid $border-color;
+        position: sticky;
+        top: 0;
+        background-color: $card-bg;
+        h5 {
+            font-size: 15px;
+            margin-bottom: 0;
+            line-height: 40px;
+        }
+        li {            
+            a {
+                color: $dark;
+                font-size: 20px;
+                &:hover {
+                    color: $primary;
+                }
+            }
+        } 
+    }
+    .chat-user-body {
+        .userbar {
+            text-align: center;
+            padding: 30px 0;
+            .user-pic {
+                width: 100px;
+                max-width: 100%;
+                height: auto;
+                border-radius: 50%;
+            }
+            h5 {
+                margin-top: 30px;
+            }
+        }
+        .user-detail {
+            .user-detail-header {
+                padding: 15px;
+                margin-bottom: 0;
+                border-bottom: 1px solid $border-color;
+            }
+            .user-about {
+                padding: 15px;
+                margin-bottom: 5px;
+            }
+            .user-media {
+                padding: 15px;
+                margin-bottom: 5px;
+                .user-media-slider {
+                    &> i {
+                        position: absolute;
+                        top: -45px;
+                        right: 0;
+                        font-size: 16px;
+                        z-index: 9;
+                        &:first-child {
+                            right: 15px;
+                        }
+                    }
+                }
+            }
+            .user-social {
+                padding: 15px;
+                margin-bottom: 5px;
+                li {
+                    a {
+                        font-size: 20px;
+                        margin-right: 10px;
+                        &.facebook {
+                            color: #3C5B9A;
+                        }
+                        &.twitter {
+                            color: #1EA2F1;
+                        }
+                        &.instagram {
+                            color: #D2418F;
+                        }
+                    }
+                }
+            }
+            .user-setting {
+                padding: 15px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+.incoming-video-modal {
+    .modal-content {
+        background-image: url('../images/video_call_bg.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .modal-body {
+        padding: 30px 0;
+        text-align: center;
+        img {
+            width: 100px;
+        }
+        h5 {
+            font-size: 18px;
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .btn {
+            font-size: 16px;
+            padding: 6px 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+}
+.incoming-voice-modal {
+    .modal-body {
+        padding: 30px 0;
+        text-align: center;
+        img {
+            width: 100px;
+        }
+        h5 {
+            font-size: 18px;
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .btn {
+            font-size: 16px;
+            padding: 6px 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+}
+.error-screen-modal {
+    .modal-body {
+        padding: 30px 0;
+        text-align: center;
+        img {
+            width: 200px;
+        }
+        h5 {
+            font-size: 18px;
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .btn {
+            font-size: 16px;
+            padding: 6px 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+}
+.create-group-modal {
+    .modal-body {
+        .create-group-header {
+            padding: 15px;
+            margin-bottom: 0;
+            border-bottom: 1px solid $border-color;
+        }
+        .added-users {
+            padding: 15px;
+        }
+        .add-users-list {
+            ul {
+                margin-bottom: 0;
+                li {
+                    padding: 15px 0;
+                    border-left: 2px solid transparent;
+                    img {
+                        width: 40px;
+                        margin-right: 10px;
+                    }
+                    h5 {
+                        font-size: 15px;
+                        margin-bottom: 5px;
+                    }
+                    p {
+                        margin-bottom: 0;
+                    }
+                    .custom-control-input {
+                        position: relative;
+                    }
+                    .custom-control-label {
+                        vertical-align: middle;
+                        &:before {
+                            left: -20px;
+                        }
+                        &:after {
+                            left: -20px;
+                        }
+                    }
+                }
+            }
+        }
+        .btn {
+            font-size: 16px;
+            padding: 6px 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .avatar-group {
+            display: inline-flex;
+            .avatar {
+                position: relative;
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+                margin-left: -.8rem;
+                transition: transform 0.2s;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                    border: 2px solid $card-bg;
+                    background-color: $card-bg;
+                }
+                &:hover {
+                    -webkit-mask-image: none;
+                    mask-image: none;
+                    z-index: 1;
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .add-users-search {
+            .input-group-append {
+                margin-left: 0;
+                .btn {
+                    background-color: $secondary-rgba;
+                    padding: 4px 12px;
+                    color: $dark;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<svg id="play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8294ca;
+      }
+    </style>
+  </defs>
+  <rect id="Rounded_Rectangle_1_copy_4" data-name="Rounded Rectangle 1 copy 4" class="cls-1" width="50" height="50" rx="3" ry="3"/>
+  <image id="play-2" data-name="play" x="19" y="16" width="14" height="18" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAASCAYAAABrXO8xAAAAs0lEQVQ4jbXTMUoDQBCF4YmkCBaBQCC3SJXWKn0aPYDXsLdMbyNi61lsLNMEUljY2AtRPlncJcHGyYIP3rLN/5jdmRngMiKmEXEfEV+RFbZ+9Iw5IuNy7By0xy1Gf8ENLL7CW43Y4CILlvsED0cV3GGcAZuXR29/xSoLFp9jjc8a8IRZBmxe4KXC77jGIAMWD3GDjxrweJZu+G/9R6ldn3NyO7oGoGvkmk4a8q616lvkiPgGVq7DmSe7VT0AAAAASUVORK5CYII="/>
+</svg>
